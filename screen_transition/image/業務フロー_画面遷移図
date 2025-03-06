@@ -2,11 +2,13 @@ digraph {
 	fillcolor=white fontname="Helvetica Neue" fontsize=16 nodesep=0.3 rankdir=LR ranksep=0.5 splines=polyline style=filled
 	subgraph "cluster_業務フロー" {
 		fillcolor="#B3E0F2" label="業務フロー" labeljust=l labelloc=t penwidth=1.5 style=filled
-		subgraph "cluster_業務フロー_契約締結" {
-			fillcolor="#C2E6F4" label="契約締結" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
-			"業務フロー_契約締結" [label="契約締結" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
-			"業務フロー_契約締結完了" [label="契約締結完了" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+		subgraph "cluster_業務フロー_業務フロー" {
+			fillcolor="#C2E6F4" label="業務フロー" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"業務フロー_業務フロー一覧" [label="業務フロー一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務フロー_業務フロー詳細/編集" [label="業務フロー詳細/編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務フロー_業務フロー新規登録" [label="業務フロー新規登録" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務フロー_可視化" [label="可視化" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務フロー_配布" [label="配布" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
 		}
-		"業務フロー_契約締結" -> "業務フロー_契約締結完了" [label="署名後、契約締結ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
 	}
 }

@@ -4,26 +4,32 @@ digraph {
 		fillcolor="#B3E0F2" label=PRM labeljust=l labelloc=t penwidth=1.5 style=filled
 		subgraph "cluster_PRM_エンゲージメント" {
 			fillcolor="#C2E6F4" label="エンゲージメント" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
-			"PRM_契約締結" [label="契約締結" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_KPIダッシュボード" [label="KPIダッシュボード" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_営業フォロー" [label="営業フォロー" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_チャット" [label="チャット" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
 		}
 		subgraph "cluster_PRM_パートナーポータル" {
 			fillcolor="#C2E6F4" label="パートナーポータル" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
-			"PRM_契約締結" [label="契約締結" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_ホーム" [label="ホーム" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_ドキュメント共有" [label="ドキュメント共有" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
 		}
 		subgraph "cluster_PRM_パートナー管理（派遣会社・業務委託先）" {
 			fillcolor="#C2E6F4" label="パートナー管理（派遣会社・業務委託先）" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
 			"PRM_パートナー一覧" [label="パートナー一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
 			"PRM_パートナー詳細" [label="パートナー詳細" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
 			"PRM_FB実施" [label="FB実施" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
-			PRM_ [label="" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
-			PRM_ [label="" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
-			PRM_ [label="" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
-			PRM_ [label="" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_取引実績分析" [label="取引実績分析" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
 		}
 		subgraph "cluster_PRM_案件管理（SFA）" {
 			fillcolor="#C2E6F4" label="案件管理（SFA）" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
-			"PRM_契約締結" [label="契約締結" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_共有案件管理" [label="共有案件管理" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_CRM連携" [label="CRM連携" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_顧客一覧" [label="顧客一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_顧客詳細" [label="顧客詳細" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_分析" [label="分析" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"PRM_フォローアップリスト" [label="フォローアップリスト" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
 		}
-		"PRM_契約締結" -> "PRM_契約締結完了" [label="署名後、契約締結ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"PRM_パートナー一覧" -> "PRM_パートナー詳細" [label="詳細ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"PRM_パートナー詳細" -> "PRM_FB実施" [label="FBボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
 	}
 }

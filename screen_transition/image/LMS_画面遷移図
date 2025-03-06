@@ -2,11 +2,38 @@ digraph {
 	fillcolor=white fontname="Helvetica Neue" fontsize=16 nodesep=0.3 rankdir=LR ranksep=0.5 splines=polyline style=filled
 	subgraph cluster_LMS {
 		fillcolor="#B3E0F2" label=LMS labeljust=l labelloc=t penwidth=1.5 style=filled
-		subgraph "cluster_LMS_契約締結" {
-			fillcolor="#C2E6F4" label="契約締結" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
-			"LMS_契約締結" [label="契約締結" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
-			"LMS_契約締結完了" [label="契約締結完了" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+		subgraph "cluster_LMS_ダッシュボード" {
+			fillcolor="#C2E6F4" label="ダッシュボード" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"LMS_パートナースタッフ" [label="パートナースタッフ" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
 		}
-		"LMS_契約締結" -> "LMS_契約締結完了" [label="署名後、契約締結ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		subgraph "cluster_LMS_テスト" {
+			fillcolor="#C2E6F4" label="テスト" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"LMS_テスト一覧" [label="テスト一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"LMS_テスト新規登録" [label="テスト新規登録" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"LMS_テスト詳細/編集" [label="テスト詳細/編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"LMS_テスト受験" [label="テスト受験" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"LMS_テスト受験結果" [label="テスト受験結果" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"LMS_定着度理解テスト受験" [label="定着度理解テスト受験" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"LMS_定着度理解テスト受験結果" [label="定着度理解テスト受験結果" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+		}
+		subgraph "cluster_LMS_研修" {
+			fillcolor="#C2E6F4" label="研修" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"LMS_研修一覧" [label="研修一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"LMS_研修新規作成" [label="研修新規作成" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"LMS_研修詳細/編集" [label="研修詳細/編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"LMS_受講状況管理" [label="受講状況管理" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+		}
+		"LMS_テスト一覧" -> "LMS_テスト新規登録" [label="新規登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_テスト一覧" -> "LMS_テスト詳細/編集" [label="詳細ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_テスト新規登録" -> "LMS_テスト一覧" [label="戻る or 登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_テスト詳細/編集" -> "LMS_テスト一覧" [label="戻るボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_パートナースタッフ" -> "LMS_テスト受験" [label="受験ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_パートナースタッフ" -> "LMS_定着度理解テスト受験" [label="受験ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_テスト受験" -> "LMS_テスト受験結果" [label="採点ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_定着度理解テスト受験" -> "LMS_定着度理解テスト受験結果" [label="採点ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_研修一覧" -> "LMS_研修新規作成" [label="新規作成ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_研修一覧" -> "LMS_研修詳細/編集" [label="詳細ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_研修新規作成" -> "LMS_研修一覧" [label="戻る or 登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"LMS_研修詳細/編集" -> "LMS_研修一覧" [label="戻るボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
 	}
 }
