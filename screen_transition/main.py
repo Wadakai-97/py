@@ -1,9 +1,9 @@
 from graphviz import Digraph
-from groups import groups  # 別ファイルからグループデータをインポート
+from groups import groups
 
 def initialize_dot():
     """Digraphオブジェクトを初期化して返す"""
-    dot = Digraph(format="png")  # PDFからPNGに変更
+    dot = Digraph(format="png")
     dot.attr(rankdir="LR", nodesep="0.3", ranksep="0.5", splines="polyline",
              fontsize="16", style="filled", fillcolor="white", fontname="Helvetica Neue")
     return dot
@@ -20,7 +20,6 @@ def create_subgraph(dot, name, screens, prefix, color, transitions):
     with dot.subgraph(name=f"cluster_{name}") as sub:
         sub.attr(label=name, labelloc="t", labeljust="l", style="filled", fillcolor=color, penwidth="1.5")
 
-        # カテゴリごとにノードを追加
         for category in sorted(screens.keys()):
             screen_list = screens[category]
             category_color = lighten_color(color)
@@ -29,7 +28,6 @@ def create_subgraph(dot, name, screens, prefix, color, transitions):
                 for screen in screen_list:
                     add_node_to_subgraph(subcat, screen, prefix)
 
-                # 判定ノードもカテゴリ内に表示するために、transitionsから判定ノードを抽出して追加
                 for transition_key in sorted(transitions.keys()):
                     transition_list = transitions[transition_key]
                     for src, dst, _ in transition_list:
@@ -38,7 +36,6 @@ def create_subgraph(dot, name, screens, prefix, color, transitions):
                         if "判定_" in dst and dst not in screen_list:
                             add_node_to_subgraph(subcat, dst, prefix)
 
-        # 判定ノードが他のカテゴリに入らないようにする
         for transition_key in sorted(transitions.keys()):
             transition_list = transitions[transition_key]
             for src, dst, _ in transition_list:
@@ -47,7 +44,6 @@ def create_subgraph(dot, name, screens, prefix, color, transitions):
                 if "判定_" in dst:
                     add_node_to_subgraph(sub, dst, prefix)
 
-        # 横並びにするためのロジックを追加
         for transition_key in sorted(transitions.keys()):
             transition_list = transitions[transition_key]
             for i, (src, dst, _) in enumerate(transition_list[:-1]):
@@ -63,7 +59,6 @@ def add_node_to_subgraph(sub, screen, prefix):
     unique_screen_name = prefix + screen
     clean_screen_name = screen.replace("判定_", "")
 
-    # 判定ノードは楕円（ellipse）、通常のノードはボックス
     shape = "ellipse" if "判定_" in screen else "box"
     
     sub.node(unique_screen_name, clean_screen_name, shape=shape,
