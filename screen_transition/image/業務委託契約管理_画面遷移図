@@ -1,0 +1,79 @@
+digraph {
+	fillcolor=white fontname="Helvetica Neue" fontsize=16 nodesep=0.3 rankdir=LR ranksep=0.5 splines=polyline style=filled
+	subgraph "cluster_業務委託契約管理" {
+		fillcolor="#D5E8D4" label="業務委託契約管理" labeljust=l labelloc=t penwidth=1.5 style=filled
+		subgraph "cluster_業務委託契約管理_契約書管理" {
+			fillcolor="#DDECDC" label="契約書管理" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"業務_契約書一覧" [label="契約書一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_契約書作成" [label="契約書作成" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_契約書編集" [label="契約書編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		}
+		subgraph "cluster_業務委託契約管理_契約締結" {
+			fillcolor="#DDECDC" label="契約締結" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"業務_契約締結" [label="契約締結" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_契約締結完了" [label="契約締結完了" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		}
+		subgraph "cluster_業務委託契約管理_支払い管理" {
+			fillcolor="#DDECDC" label="支払い管理" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"業務_支払い管理一覧" [label="支払い管理一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_支払い内容詳細" [label="支払い内容詳細" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_支払い方法選択" [label="支払い方法選択" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_支払い内容確認" [label="支払い内容確認" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_支払い成功画面" [label="支払い成功画面" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_支払い失敗画面" [label="支払い失敗画面" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		}
+		subgraph "cluster_業務委託契約管理_発注管理" {
+			fillcolor="#DDECDC" label="発注管理" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"業務_発注一覧" [label="発注一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_発注書作成" [label="発注書作成" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_発注編集" [label="発注編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		}
+		subgraph "cluster_業務委託契約管理_請求管理" {
+			fillcolor="#DDECDC" label="請求管理" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"業務_請求書一覧" [label="請求書一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_請求書作成" [label="請求書作成" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_請求書編集" [label="請求書編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		}
+		"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		"業務_判定_支払いに成功した" [label="支払いに成功した" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		"業務_発注一覧" -> "業務_発注編集" [constraint=false]
+		"業務_発注編集" -> "業務_発注書作成" [constraint=false]
+		"業務_契約書一覧" -> "業務_契約書作成" [label="新規作成ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_契約書一覧" -> "業務_契約書編集" [label="編集ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_契約書編集" -> "業務_契約書一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_契約締結" -> "業務_契約締結完了" [label="署名後、契約締結ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_支払い管理一覧" -> "業務_支払い内容詳細" [label="詳細ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_支払い内容詳細" -> "業務_支払い管理一覧" [label="戻るボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_支払い管理一覧" -> "業務_支払い方法選択" [label="支払いボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_支払い方法選択" -> "業務_支払い内容確認" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_支払い内容確認" -> "業務_判定_支払いに成功した" [label="支払いボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_判定_支払いに成功した" -> "業務_支払い成功画面" [label="はい" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_判定_支払いに成功した" -> "業務_支払い失敗画面" [label="いいえ" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_支払い成功画面" -> "業務_支払い管理一覧" [label="一覧に戻るボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_支払い失敗画面" -> "業務_支払い管理一覧" [label="一覧に戻るボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_発注一覧" -> "業務_発注書作成" [label="新規作成ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_発注一覧" -> "業務_発注編集" [label="編集ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_発注書作成" -> "業務_発注一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_発注編集" -> "業務_発注一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_請求書一覧" -> "業務_請求書作成" [label="新規作成ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_請求書一覧" -> "業務_請求書編集" [label="編集ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_請求書作成" -> "業務_請求書一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"業務_請求書編集" -> "業務_請求書一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+	}
+}

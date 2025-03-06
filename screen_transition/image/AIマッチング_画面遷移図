@@ -1,0 +1,37 @@
+digraph {
+	fillcolor=white fontname="Helvetica Neue" fontsize=16 nodesep=0.3 rankdir=LR ranksep=0.5 splines=polyline style=filled
+	subgraph "cluster_AIマッチング" {
+		fillcolor="#FFD700" label="AIマッチング" labeljust=l labelloc=t penwidth=1.5 style=filled
+		subgraph "cluster_AIマッチング_スタッフ管理" {
+			fillcolor="#FFDF33" label="スタッフ管理" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"AIマッチング_スタッフ一覧" [label="スタッフ一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"AIマッチング_スタッフ新規登録" [label="スタッフ新規登録" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"AIマッチング_スタッフ詳細/編集" [label="スタッフ詳細/編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+		}
+		subgraph "cluster_AIマッチング_マッチング" {
+			fillcolor="#FFDF33" label="マッチング" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"AIマッチング_マッチング一覧" [label="マッチング一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"AIマッチング_マッチング詳細" [label="マッチング詳細" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"AIマッチング_マッチング実施" [label="マッチング実施" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"AIマッチング_面談日程調整" [label="面談日程調整" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"AIマッチング_分析" [label="分析" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+		}
+		subgraph "cluster_AIマッチング_案件管理" {
+			fillcolor="#FFDF33" label="案件管理" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"AIマッチング_案件一覧" [label="案件一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"AIマッチング_案件作成" [label="案件作成" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"AIマッチング_案件詳細/編集" [label="案件詳細/編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+		}
+		"AIマッチング_スタッフ一覧" -> "AIマッチング_スタッフ新規登録" [label="新規作成ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"AIマッチング_スタッフ一覧" -> "AIマッチング_スタッフ詳細/編集" [label="詳細ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"AIマッチング_スタッフ新規登録" -> "AIマッチング_スタッフ一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"AIマッチング_スタッフ詳細/編集" -> "AIマッチング_スタッフ一覧" [label="戻る or 登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"AIマッチング_マッチング一覧" -> "AIマッチング_マッチング詳細" [label="詳細ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"AIマッチング_マッチング一覧" -> "AIマッチング_マッチング実施" [label="マッチングボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"AIマッチング_マッチング詳細" -> "AIマッチング_マッチング一覧" [label="戻るボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"AIマッチング_マッチング実施" -> "AIマッチング_マッチング一覧" [label="戻るボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"AIマッチング_案件一覧" -> "AIマッチング_案件作成" [label="新規作成ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"AIマッチング_案件一覧" -> "AIマッチング_案件詳細/編集" [label="詳細ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"AIマッチング_案件詳細/編集" -> "AIマッチング_案件一覧" [label="戻る or 登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+	}
+}

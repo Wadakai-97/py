@@ -1,0 +1,47 @@
+digraph {
+	fillcolor=white fontname="Helvetica Neue" fontsize=16 nodesep=0.3 rankdir=LR ranksep=0.5 splines=polyline style=filled
+	subgraph "cluster_その他" {
+		fillcolor="#F4A460" label="その他" labeljust=l labelloc=t penwidth=1.5 style=filled
+		subgraph "cluster_その他_ひな形" {
+			fillcolor="#F6B67F" label="ひな形" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"その他_派遣契約書 一覧" [label="派遣契約書 一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_派遣契約書 新規登録" [label="派遣契約書 新規登録" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_派遣契約書 編集" [label="派遣契約書 編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_業務委託契約書 一覧" [label="業務委託契約書 一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_業務委託契約書 新規登録" [label="業務委託契約書 新規登録" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_業務委託契約書 編集" [label="業務委託契約書 編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_発注書 一覧" [label="発注書 一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_発注書 新規登録" [label="発注書 新規登録" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_発注書 編集" [label="発注書 編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_請求書 一覧" [label="請求書 一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_請求書 新規登録" [label="請求書 新規登録" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_請求書 編集" [label="請求書 編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+		}
+		subgraph "cluster_その他_リマインド（各種契約・請求）" {
+			fillcolor="#F6B67F" label="リマインド（各種契約・請求）" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"その他_リマインド一覧" [label="リマインド一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_リマインド新規登録" [label="リマインド新規登録" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"その他_リマインド編集" [label="リマインド編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+		}
+		"その他_リマインド一覧" -> "その他_リマインド新規登録" [label="新規登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_リマインド一覧" -> "その他_リマインド編集" [label="編集ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_リマインド新規登録" -> "その他_リマインド一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_リマインド編集" -> "その他_リマインド一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_業務委託契約書 一覧" -> "その他_業務委託契約書 新規登録" [label="新規登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_業務委託契約書 一覧" -> "その他_業務委託契約書 編集" [label="編集ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_業務委託契約書 新規登録" -> "その他_業務委託契約書 一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_業務委託契約書 編集" -> "その他_業務委託契約書 一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_派遣契約書 一覧" -> "その他_派遣契約書 新規登録" [label="新規登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_派遣契約書 一覧" -> "その他_派遣契約書 編集" [label="編集ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_派遣契約書 新規登録" -> "その他_派遣契約書 一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_派遣契約書 編集" -> "その他_派遣契約書 一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_発注書 一覧" -> "その他_発注書 新規登録" [label="新規登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_発注書 一覧" -> "その他_発注書 編集" [label="編集ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_発注書 新規登録" -> "その他_発注書 一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_発注書 編集" -> "その他_発注書 一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_請求書 一覧" -> "その他_請求書 新規登録" [label="新規登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_請求書 一覧" -> "その他_請求書 編集" [label="編集ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_請求書 新規登録" -> "その他_請求書 一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"その他_請求書 編集" -> "その他_請求書 一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+	}
+}

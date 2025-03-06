@@ -1,0 +1,35 @@
+digraph {
+	fillcolor=white fontname="Helvetica Neue" fontsize=16 nodesep=0.3 rankdir=LR ranksep=0.5 splines=polyline style=filled
+	subgraph "cluster_派遣契約管理" {
+		fillcolor="#B3E0F2" label="派遣契約管理" labeljust=l labelloc=t penwidth=1.5 style=filled
+		subgraph "cluster_派遣契約管理_契約書管理" {
+			fillcolor="#C2E6F4" label="契約書管理" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"派遣_契約書一覧" [label="契約書一覧" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"派遣_契約書作成" [label="契約書作成" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"派遣_契約書編集" [label="契約書編集" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"派遣_契約書レポート" [label="契約書レポート" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"派遣_判定_契約書に問題がある" [label="契約書に問題がある" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"派遣_判定_契約書に問題がある" [label="契約書に問題がある" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"派遣_判定_契約書に問題がある" [label="契約書に問題がある" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		}
+		subgraph "cluster_派遣契約管理_契約締結" {
+			fillcolor="#C2E6F4" label="契約締結" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"派遣_契約締結" [label="契約締結" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"派遣_契約締結完了" [label="契約締結完了" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"派遣_判定_契約書に問題がある" [label="契約書に問題がある" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"派遣_判定_契約書に問題がある" [label="契約書に問題がある" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+			"派遣_判定_契約書に問題がある" [label="契約書に問題がある" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		}
+		"派遣_判定_契約書に問題がある" [label="契約書に問題がある" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		"派遣_判定_契約書に問題がある" [label="契約書に問題がある" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		"派遣_判定_契約書に問題がある" [label="契約書に問題がある" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=ellipse style=filled width=1.2]
+		"派遣_契約書一覧" -> "派遣_契約書作成" [label="新規作成ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"派遣_契約書一覧" -> "派遣_契約書編集" [label="編集ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"派遣_契約書作成" -> "派遣_判定_契約書に問題がある" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"派遣_契約書編集" -> "派遣_契約書一覧" [label="登録ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"派遣_判定_契約書に問題がある" -> "派遣_契約書レポート" [label="はい" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"派遣_判定_契約書に問題がある" -> "派遣_契約書一覧" [label="いいえ" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"派遣_契約書レポート" -> "派遣_契約書編集" [label="編集ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+		"派遣_契約締結" -> "派遣_契約締結完了" [label="署名後、契約締結ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+	}
+}

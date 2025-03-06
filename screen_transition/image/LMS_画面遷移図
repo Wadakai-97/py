@@ -1,0 +1,12 @@
+digraph {
+	fillcolor=white fontname="Helvetica Neue" fontsize=16 nodesep=0.3 rankdir=LR ranksep=0.5 splines=polyline style=filled
+	subgraph cluster_LMS {
+		fillcolor="#B3E0F2" label=LMS labeljust=l labelloc=t penwidth=1.5 style=filled
+		subgraph "cluster_LMS_契約締結" {
+			fillcolor="#C2E6F4" label="契約締結" labeljust=c labelloc=t penwidth=1.0 rankdir=LR style=filled
+			"LMS_契約締結" [label="契約締結" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+			"LMS_契約締結完了" [label="契約締結完了" fillcolor=white fontname="Helvetica Neue" fontsize=12 height=0.5 shape=box style=filled width=1.2]
+		}
+		"LMS_契約締結" -> "LMS_契約締結完了" [label="署名後、契約締結ボタン押下" arrowhead=vee color="#5B9BD5" fontsize=10 penwidth=2]
+	}
+}
