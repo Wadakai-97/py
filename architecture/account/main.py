@@ -60,7 +60,7 @@ def create_storage_layer():
     return s3
 
 # AWS インフラ構成図（視認性最適化 + 横長構成）
-with Diagram("CyTech Infra Architecture", show=False, direction="LR"):
+with Diagram("CyTech Account Infra Architecture", show=False, direction="LR"):
     user, cognito = create_authentication_layer()
     api_gateway, lambda_auth, unified_api = create_authorization_layer()
     user_api, dynamodb = create_user_management()
